@@ -13,22 +13,22 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "consumerDetails")
+@Table(name = "consumerdetails")//defines table name. if no table is there with this name then sprinng will create a table with this name  
 public class consumer {
 	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO )// used in auto increment
-@Column(name = "consumerId")
+@Column(name = "consumerid")
 	public int id;
-	@Column(name = "password")
-
+	@Column(name = "password")//<-- defines column properties such as column name, column type, Not null, Auto incrementive
+	@GeneratedValue(strategy = GenerationType.AUTO )// used in auto increment
 	public String password;
 	@Column(name = "email")
 	public String email;
-	@Column(name = "registrationDate")
+	@Column(name = "registrationdate")
 	public String date;
-	@Column(name = "consumerLocation")
+	@Column(name = "consumerlocation")
 	public String location;
 	@Column(name = "name")
 	public String name;

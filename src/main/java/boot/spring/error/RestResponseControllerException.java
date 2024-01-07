@@ -19,7 +19,7 @@ import boot.spring.Entity.errorMessage;
 public class RestResponseControllerException extends ResponseEntityExceptionHandler{
  
 	@ExceptionHandler(departmentNotFoundException.class)// defines type of Exception below method handles
-	public ResponseEntity<errorMessage> departmentNotFound(departmentNotFoundException exception, WebRequest req){
+	public ResponseEntity<errorMessage> departmentNotFound(departmentNotFoundException exception, WebRequest req){//Restcontroller will call below funtion by parameter as defined in body.
 		errorMessage error = new errorMessage(HttpStatus.NOT_FOUND,exception.getMessage());// makes an structure of an error message.
 		return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
 		
