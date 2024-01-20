@@ -1,0 +1,30 @@
+This file contains important notes for Spring boot, Spring JPA.
+  
+  Each part of Spring boot, Spring framework, and spring JPA is explained in below video and pratically implemented in multiple projects or repos.\
+  such projects are named as 'spring','springJPA' 
+  video link : https://www.youtube.com/watch?v=zvR-Oif_nxg
+  for spring documentation : https://docs.spring.io/
+  for spring intializer : https://start.spring.io/
+ 
+ **JPQL** :
+ JPQL are related to classes we have created not with Tables of DB.	
+ working of JPQL query :
+ Eg. Structure : 	@Query("select s from student s where s.studentEmail = ?1")
+ 
+
+first : object s will be get from system and will compare the object email and given email.
+        if found to be same then that object will be thrown or else next object will be iterated.    
+
+        
+**Native Query** :
+Native Queries are the native SQL Queries that are executed using SQL tables.
+Structure :
+@Query(value = "SELECT * from student s where s.student_id = ?1",
+			nativeQuery = true)
+			
+**Transactional** :
+tranasactional attribute enables us to modify content of table with transaction( for details about transactions read DBMS).
+
+
+**Modifying** :
+Modifying attributes allows us to modify content of table        
